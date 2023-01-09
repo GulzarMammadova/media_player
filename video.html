@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Video Player</title>
+</head>
+<body>
+<section id="video" >
+  <div class="header">
+    <h1>Favourites</h1>
+    <div class="video-btn"> <button class="watch-btn">Music</button></div>
+  </div>
+  <div class="video-container" id="video-container">
+    <div class="video-info">
+      <h4 id="title"></h4>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="timer">
+        <div></div>
+        <span aria-label="timer">00:00</span>
+      </div>
+    </div>
+    <video class="video">
+      <source 
+        src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
+        type="video/webm"
+      />
+      <p>Your browser doesn't support HTML5 video.</p>
+    </video>
+    <div class="navigation">
+      <button id="play" class="play-pause-video-btn">
+        <i class="fas fa-play"></i>
+      </button>
+      <button id="next" class="action-btn">
+        <i class="fas fa-forward"></i>
+      </button>
+    </div>
+  </div>
+</section>
+  
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
