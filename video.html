@@ -19,7 +19,7 @@
   </div>
   <div class="video-container" id="video-container">
     <div class="video-info">
-      <h4 id="title"></h4>
+      <h4 id="title">One Woman’s Universe </h4>
       <div class="progress-container" id="progress-container">
         <div class="progress" id="progress"></div>
       </div>
@@ -29,29 +29,22 @@
       </div>
     </div>
     <div class="video-screen">
-      <video class="video">
+      <video class="video" id="video-src" preload="metadata">
         <source 
-          src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
+          src="./video/one_woman's_universe_– oten_30__tvc (360p).mp4"
           type="video/mp4"
-        />
-        <source
-          src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
-          type="video/webm"
         />
         <p>Your browser doesn't support HTML5 video.</p>
       </video>
     </div>
 
     <div class="navigation">
-      <button id="play" class="play-pause-video-btn">
-        <i class="fas fa-play"></i>
-      </button>
-      <button id="br" class="control-btn"><i class="fa fa-backward" aria-hidden="true" data-skip="-10"></i></button>
-      <button id="fr" class="control-btn"><i class="fa fa-forward" aria-hidden="true" data-skip="10"></i></button>
-      <button id="volume" class="volume-btn"><i class="fa fa-volume-up" aria-hidden="true"></i>
-        <!-- <input type="range" min="0" max="50" value="0" id = "input"> -->
-      </button>
+      <button class="control-btn toggleButton" title="Toggle Play"> ►  </button>
+      <button id="br" class="control-btn-video"><i class="fa fa-backward" aria-hidden="true" data-skip="-10"></i></button>
+      <button id="fr" class="control-btn-video"><i class="fa fa-forward" aria-hidden="true" data-skip="10"></i></button>
+      <button id="volume" class="volume-btn"><i class="fa fa-volume-up" aria-hidden="true"></i><input type="range" min="0" max="100" class="volume_range" /></button>
       <button id="fullscreen" class="fullscreen-btn"><i class="fa fa-arrows-alt" aria-hidden="true"></i>
+      <button id="picture-in-picture" class="picture-in-picture-mode"><i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
       <!-- <div class="vertical-nav">
         <button id="like" class="like-btn"><i class="fa fa-heart" aria-hidden="true"></i></button>
@@ -76,8 +69,6 @@
   </div>
 </section>
   
-
-    
-    <script src="./js/main.js"></script>
+    <script src="./js/video.js"></script>
 </body>
 </html>

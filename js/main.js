@@ -6,7 +6,7 @@ const audio = document.getElementById("audio");
 const progress = document.getElementById("progress");
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById("title");
-const cover = document.getElementsByClassName(".img-container");
+const cover =  document.getElementById("cover")
 const durTime = document.querySelector("#durTime");
 const currTime = document.querySelector("#currTime");
 const timerWrapper = document.querySelector('.timer');
@@ -80,6 +80,7 @@ function updateProgress(e) {
     progress.style.width = `${progressPercent}%`;
 }
 audio.addEventListener("ended", nextSong);
+
 audio.addEventListener('timeupdate', setTime);
 
 function setTime() {
@@ -112,25 +113,3 @@ function setProgress(e) {
   function handleSkip() {
     audio.currentTime += Number(this.dataset.skip);
   }
-
-//VIDEO
-// const videoContainer = document.getElementById("video-container");
-// const video  = document.getElementById("video");
-// const nav = document.getSelection('.navigation');
-// const progressBar = document.querySelector(".progress__filled");
-// const toggleBtn = document.querySelector(".toggleButton");
-// const volume = document.getElementById('volume');
-// const sliders = document.querySelectorAll(".navigation__slider");
-// const skipBtns = document.querySelectorAll("[data-skip]");
-
-// function togglePlay() {
-//   if (video.paused || video.ended) {
-//     video.play();
-//     toggleBtn.innerHTML = "❚ ❚";
-//   } else {
-//     video.pause();
-//     toggleBtn.innerHTML = "►";
-//   }
-// }
-
-  
