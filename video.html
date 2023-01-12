@@ -15,7 +15,7 @@
 <section id="video" >
   <div class="header">
     <h1>Favourites</h1>
-    <div class="video-btn"> <button class="watch-btn">Music</button></div>
+    <div class="music-btn"> <a class="watch-btn" href="./index.html">Music</a></div> 
   </div>
   <div class="video-container" id="video-container">
     <div class="video-info">
@@ -28,24 +28,50 @@
         <span aria-label="timer">00:00</span>
       </div>
     </div>
-    <video class="video">
-      <source 
-        src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
-        type="video/mp4"
-      />
-      <source
-        src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
-        type="video/webm"
-      />
-      <p>Your browser doesn't support HTML5 video.</p>
-    </video>
+    <div class="video-screen">
+      <video class="video">
+        <source 
+          src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://res.cloudinary.com/ifeomaimoh/video/upload/v1650567487/speech_ofvfzq.mp4"
+          type="video/webm"
+        />
+        <p>Your browser doesn't support HTML5 video.</p>
+      </video>
+    </div>
+
     <div class="navigation">
       <button id="play" class="play-pause-video-btn">
         <i class="fas fa-play"></i>
       </button>
-      <button id="next" class="action-btn">
-        <i class="fas fa-forward"></i>
+      <button id="br" class="control-btn"><i class="fa fa-backward" aria-hidden="true" data-skip="-10"></i></button>
+      <button id="fr" class="control-btn"><i class="fa fa-forward" aria-hidden="true" data-skip="10"></i></button>
+      <button id="volume" class="volume-btn"><i class="fa fa-volume-up" aria-hidden="true"></i>
+        <!-- <input type="range" min="0" max="50" value="0" id = "input"> -->
       </button>
+      <button id="fullscreen" class="fullscreen-btn"><i class="fa fa-arrows-alt" aria-hidden="true"></i>
+      </button>
+      <!-- <div class="vertical-nav">
+        <button id="like" class="like-btn"><i class="fa fa-heart" aria-hidden="true"></i></button>
+        <button id="later" class="later-btn"><img class="fa fa-clock-o" src="./images/icons/clock.png">
+        </button>
+        <button id="add" class="add-btn"><i class="fa fa-bookmark" aria-hidden="true"></i>
+        </button>
+        <button id="share" class="share-btn"><i class="fa-light fa-paper-plane"></i>
+        </button>
+      </div> -->
+    </div>
+  </div>
+  <div class="recently-play">
+    <div class="recently-content">
+      <h4>Recently Play</h4>
+      <div class="recently-list">
+        <div class="recently-item"> </div>
+        <div class="recently-item"> </div>
+
+      </div>
     </div>
   </div>
 </section>

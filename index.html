@@ -15,7 +15,7 @@
 <section id="music" >
   <div class="header">
     <h1> Favourites</h1>
-    <div class="video-btn"> <button class="watch-btn">Watch Video</button></div>
+    <div class="video-btn"> <a class="watch-btn" href="./video.html">Watch Video</a></div> 
   </div>
   <div class="music-container" id="music-container">
     <div class="music-info">
@@ -34,14 +34,16 @@
     </div>
     <div class="navigation">
       <button id="prev" class="action-btn">
-        <i class="fas fa-backward"></i>
+        <i class="fa fa-step-backward fa-2x" aria-hidden="true"></i>
       </button>
       <button id="play" class="action-btn action-btn-big">
-        <i class="fas fa-play"></i>
+        <i class="fas fa-play fa-2x"></i>
       </button>
       <button id="next" class="action-btn">
-        <i class="fas fa-forward"></i>
+        <i class="fa fa-step-forward fa-2x" aria-hidden="true"></i>
       </button>
+      <button id="br" class="control-btn"><i class="fa fa-backward" aria-hidden="true" data-skip="-10"></i>10</button>
+      <button id="fr" class="control-btn">10<i class="fa fa-forward" aria-hidden="true" data-skip="10"></i></button>
     </div>
   </div>
 </section>
@@ -51,3 +53,4 @@
     <script src="./js/main.js"></script>
 </body>
 </html>
+

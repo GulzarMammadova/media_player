@@ -2,7 +2,6 @@ const musicContainer = document.getElementById('music-container')
 const playBtn = document.getElementById("play");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-
 const audio = document.getElementById("audio");
 const progress = document.getElementById("progress");
 const progressContainer = document.getElementById('progress-container');
@@ -13,6 +12,9 @@ const currTime = document.querySelector("#currTime");
 const timerWrapper = document.querySelector('.timer');
 const timer = document.querySelector('.timer span');
 const timerBar = document.querySelector('.timer div');
+const controlBtn = document.querySelector('.control-btn')
+const skipBtns = document.querySelectorAll("[data-skip]");
+
 
 
 const songs = [
@@ -25,8 +27,8 @@ loadSong(songs[songIndex]);
 
 function loadSong(song) {
     title.innerText = song;
-    audio.src = `music/${song}.mp3`;
-    cover.src = `images/${song}.jpg`;
+    audio.src = `./music/${song}.mp3`;
+    cover.src = `./images/${song}.jpg`;
 }
   
 function play() {
@@ -100,52 +102,35 @@ function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
-  
     audio.currentTime = (clickX / width) * duration;
   }
 
+  skipBtns.forEach((btn) => {
+    btn.addEventListener("click", handleSkip);
+  });
+  
+  function handleSkip() {
+    audio.currentTime += Number(this.dataset.skip);
+  }
+
 //VIDEO
-const videoContainer = document.getElementById("video-container");
-const video  = document.getElementById("video");
-const nav = document.getElementsByClassName('.navigation')
+// const videoContainer = document.getElementById("video-container");
+// const video  = document.getElementById("video");
+// const nav = document.getSelection('.navigation');
+// const progressBar = document.querySelector(".progress__filled");
+// const toggleBtn = document.querySelector(".toggleButton");
+// const volume = document.getElementById('volume');
+// const sliders = document.querySelectorAll(".navigation__slider");
+// const skipBtns = document.querySelectorAll("[data-skip]");
 
-video.removeAttribute('nav');
-nav.style.visibility = 'visible';
-
-
-function playVideo() {
-    videoContainer.classList.add("play");
-    playBtn.querySelector("i.fas").classList.add("fa-pause");
-    playBtn.querySelector("i.fas").classList.remove("fa-play");
-    video.play();
-}
-
-function pauseVideo() {
-    videoContainer.classList.remove("play");
-    playBtn.querySelector("i.fas").classList.add("fa-play");
-    playBtn.querySelector("i.fas").classList.remove("fa-pause");
-    video.pause();
-}
-
-
-
-// playBtn.addEventListener('click', playPauseVideo);
-
-// function playPauseVideo() {
-//     if (video.paused) {
-//         playBtn.setAttribute('data-icon','u');
-//       video.play();
-//     } else {
-//       play.setAttribute('data-icon','P');
-//       video.pause();
-//     }
-//   }
-//   stop.addEventListener('click', stopVideo);
-//   video.addEventListener('ended', stopVideo);
-
-//   function stopVideo() {
+// function togglePlay() {
+//   if (video.paused || video.ended) {
+//     video.play();
+//     toggleBtn.innerHTML = "❚ ❚";
+//   } else {
 //     video.pause();
-//     video.currentTime = 0;
-//     playBtn.setAttribute('data-icon','P');
+//     toggleBtn.innerHTML = "►";
 //   }
+// }
+
   
